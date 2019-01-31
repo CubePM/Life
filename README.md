@@ -23,6 +23,9 @@ It implements mob movement and other activities.
 > Extendable API for developers
 
 ### WARNING
+** THIS PLUGIN IS CURRENTLY IN DEVELOPMENT **
+** DO NOT USE IN PRODUCTION YET< UNSTABLE ALERT!**
+
 - This plugin may cause your CPU load to go as high as 30% all the time if smart AI is enabled
 - This plugin consumes server performance and should not be ran on low end servers like 2GHz core
 - Not recommended to use a mob stacker!
