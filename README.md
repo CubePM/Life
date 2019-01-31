@@ -5,13 +5,21 @@ It implements mob movement and other activities.
 # Features
 
 > Monster Spawners
+
 > Lead
+
 > Saddle
+
 > Tame
+
 > Feed
+
 > Dye
+
 > Milk
+
 > Staring and Smart AI
+
 > Extendable API for developers
 
 # WARNING
@@ -22,7 +30,9 @@ It implements mob movement and other activities.
 - By using this software, we hold no responsibility if you overload and break your server
 
 # Implemented Mobs
+
 > Animal AI
+
 > Monster AI
 
 # Support and Information
