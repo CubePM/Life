@@ -40,7 +40,7 @@ It implements mob movement and other activities.
 
 > Chicken
 
-> Pig
+> Rabbit
 
 # Support and Information
 > If you have any issues, create a issue on github or tell a developer on discord.
