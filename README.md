@@ -30,5 +30,5 @@ It implements mob movement and other activities.
 
 | View Count | Discord |
 | :---: | :---: |
-[![View Count](http://hits.dwyl.io/CubePM/MysteryBox.svg)](http://hits.dwyl.io/CubePM/MysteryBox) | <a href="https://discord.gg/2Nvgysk"><img src="https://discordapp.com/api/guilds/425712766687510528/embed.png" alt="Discord server"/></a> |
+[![View Count](http://hits.dwyl.io/CubePM/Life.svg)](http://hits.dwyl.io/CubePM/Life) | <a href="https://discord.gg/2Nvgysk"></a> |
 
