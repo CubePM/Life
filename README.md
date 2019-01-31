@@ -3,14 +3,23 @@ Artificial intelligence system (AI) for PocketMine-MP.
 It implements mob movement and other activities.
 
 # Features
+
 [-] Monster Spawners
+
 [-] Lead
+
 [-] Saddle
+
 [-] Tame
+
 [-] Feed
+
 [-] Dye
+
 [-] Milk
+
 [-] Staring and Smart AI
+
 [-] Extendable API for developers
 
 # WARNING
@@ -22,7 +31,9 @@ It implements mob movement and other activities.
 
 # Implemented Mobs
 [-] Animal AI
+
 [-] Monster AI
+
 [ ] Neutral AI
 
 # Support and Information
@@ -30,5 +41,5 @@ It implements mob movement and other activities.
 
 | View Count | Discord |
 | :---: | :---: |
-[![View Count](http://hits.dwyl.io/CubePM/Life.svg)](http://hits.dwyl.io/CubePM/Life) | <a href="https://discord.gg/2Nvgysk"></a><img sr"https://" alt="Discord Server"</img> |
+[![View Count](http://hits.dwyl.io/CubePM/Life.svg)](http://hits.dwyl.io/CubePM/Life) | <a href="https://discord.gg/2Nvgysk"><img src="https://discordapp.com/api/guilds/425712766687510528/embed.png" alt="Discord server"/></a> |
 
