@@ -1,0 +1,11 @@
+---
+name: Life
+version: 1.0.0
+api:
+  - 3.0.0
+  - 4.0.0
+author: TheAz928
+description: "Artificial Intelligence, brings back life in the server"
+main: TheAz928\Life\Life
+
+...

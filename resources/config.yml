@@ -1,0 +1,22 @@
+---
+# Developed by TheAz928
+# Life configuration file
+
+# Version, recommended to not edit this
+version: "1.0.0"
+
+# Load balancing settings
+# Max entities per world
+max.entities: 100
+
+# Clear entities if the world is overloaded
+# Depends on "max.tick.rate"
+clear.entities: true
+
+# Max tick rate time per world
+# Recommended to set between 60 to 80
+max.tick.rate: 70
+
+# Entity configurations
+
+...
