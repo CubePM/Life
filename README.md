@@ -4,23 +4,15 @@ It implements mob movement and other activities.
 
 # Features
 
-[-] Monster Spawners
-
-[-] Lead
-
-[-] Saddle
-
-[-] Tame
-
-[-] Feed
-
-[-] Dye
-
-[-] Milk
-
-[-] Staring and Smart AI
-
-[-] Extendable API for developers
+> Monster Spawners
+> Lead
+> Saddle
+> Tame
+> Feed
+> Dye
+> Milk
+> Staring and Smart AI
+> Extendable API for developers
 
 # WARNING
 - This plugin may cause your CPU load to go as high as 30% all the time if smart AI is enabled
@@ -30,11 +22,8 @@ It implements mob movement and other activities.
 - By using this software, we hold no responsibility if you overload and break your server
 
 # Implemented Mobs
-[-] Animal AI
-
-[-] Monster AI
-
-[ ] Neutral AI
+> Animal AI
+> Monster AI
 
 # Support and Information
 > If you have any issues, create a issue on github or tell a developer on discord.
