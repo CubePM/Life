@@ -449,6 +449,8 @@ abstract class Animal extends LifeEntity implements Ageable, Feedable, Tameable,
      * @return bool
      */
     public function entityBaseTick(int $tickDiff = 1): bool {
+        $hasUpdate = parent::entityBaseTick($tickDiff);
+
         if($this->isBaby()){
             if($this->getAge() >= $this->getAdultAge()){
                 $this->setScale($this->getAdultSize());
@@ -480,15 +482,15 @@ abstract class Animal extends LifeEntity implements Ageable, Feedable, Tameable,
             if(($this->parent !== null and $this->parent->isAlive() == false)){
                 $this->parent = null;
             }else{
-                if($this->followParent($tickDiff)){
-                    return Living::entityBaseTick($tickDiff);
+                if($this->followParent($tickDiff)){ // find a better way bcz currently this overrides other movement features resulting in more cpu load
+                    return $hasUpdate;
                 }
             }
         }elseif($this->parent !== null){
             $this->parent = null;
         }
 
-        return parent::entityBaseTick($tickDiff);
+        return $hasUpdate;
     }
 
     /**

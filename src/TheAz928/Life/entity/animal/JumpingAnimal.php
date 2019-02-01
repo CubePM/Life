@@ -5,11 +5,9 @@ namespace TheAz928\Life\entity\animal;
 use TheAz928\Life\entity\traits\BreedingMovementTrait;
 use TheAz928\Life\entity\traits\FollowingMovementTrait;
 use TheAz928\Life\entity\traits\GroundMovementTrait;
-use TheAz928\Life\entity\traits\NormalMovementTrait;
 use TheAz928\Life\entity\traits\StaringMovementTrait;
 
 abstract class JumpingAnimal extends Animal {
-    use NormalMovementTrait;
     use GroundMovementTrait;
     use FollowingMovementTrait;
     use StaringMovementTrait;

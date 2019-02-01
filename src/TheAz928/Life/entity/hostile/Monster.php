@@ -1,11 +1,13 @@
 <?php
 namespace TheAz928\Life\entity\hostile;
 
+use pocketmine\entity\Human;
 use pocketmine\entity\Living;
 
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\level\Level;
 use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\Player;
 use TheAz928\Life\entity\interfaces\Ageable;
 
 use TheAz928\Life\entity\LifeEntity;
@@ -14,6 +16,20 @@ abstract class Monster extends LifeEntity implements Ageable {
 
     /** @var int */
     protected $attackDelay = 0;
+
+    /**
+     * @return float
+     */
+    public function getTargetFindRange(): float {
+        return 16.00;
+    }
+
+    /**
+     * @return float
+     */
+    public function getReach(): float {
+        return 1.02;
+    }
 
     /**
      * @return bool
@@ -116,5 +132,24 @@ abstract class Monster extends LifeEntity implements Ageable {
         $this->setBaby($nbt->getByte("isBaby", 0) == 0 ? false : true);
     }
 
-    // ToDo...
+    /**
+     * @return bool
+     */
+    protected function findTargetEntity(): bool {
+        $range = $this->getTargetFindRange();
+        foreach($this->getLevel()->getNearbyEntities($this->getBoundingBox()->expandedCopy($range, $range, $range), $this) as $nearbyEntity){
+            if($nearbyEntity instanceof Living and $nearbyEntity->isAlive()){
+                if($nearbyEntity instanceof Player and ($nearbyEntity->isCreative() or $nearbyEntity->isSpectator())){
+                    continue;
+                }
+                if($this->isInSight($nearbyEntity)){
+                    $this->setTargetEntity($nearbyEntity);
+
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
 }

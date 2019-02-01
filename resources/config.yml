@@ -17,6 +17,11 @@ clear.entities: true
 # Recommended to set between 60 to 80
 max.tick.rate: 70
 
+# Enable smart AI
+# This makes sure that mobs do not fall from high place
+# Go into lava, burn on sun etc etc.
+enable-smart-ai: true
+
 # Entity configurations
 
 ...

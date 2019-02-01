@@ -9,6 +9,7 @@ use pocketmine\math\Vector3;
 use pocketmine\network\mcpe\protocol\MoveEntityAbsolutePacket;
 
 use pocketmine\Player;
+use pocketmine\utils\UUID;
 use TheAz928\Life\Life;
 
 abstract class LifeEntity extends Living {
@@ -36,6 +37,20 @@ abstract class LifeEntity extends Living {
 
     /** @var null|Vector3 */
     protected $destination = null;
+
+    /**
+     * @var UUID|null
+     *
+     * We need these kinda stuff for leads I think
+     */
+    protected $uniqueId;
+
+    /**
+     * @return null|UUID
+     */
+    public function getUniqueId(): ?UUID {
+        return $this->uniqueId;
+    }
 
     /**
      * @return null|Vector3
@@ -69,7 +84,10 @@ abstract class LifeEntity extends Living {
     protected function initEntity(): void {
         parent::initEntity();
 
-        $this->setGenericFlag(self::DATA_FLAG_HAS_COLLISION, true);
+        if(($uid = $this->namedtag->getString("UniqueId", "")) == ""){
+            $this->namedtag->setString("UniqueId", ($uid = UUID::fromRandom()->toString()));
+        }
+        $this->uniqueId = UUID::fromString($uid);
     }
 
     /**

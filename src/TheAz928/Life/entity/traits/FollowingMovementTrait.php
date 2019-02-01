@@ -30,8 +30,10 @@ trait FollowingMovementTrait {
                 }else{
                     $mx = 0.20 * $this->speed * ($x / $xz) * $diff;
                     $mz = 0.20 * $this->speed * ($z / $xz) * $diff;
-                    if($this->isDangerous($this->add($mx, $this->getJumpVelocity(), $mz))){
-                        return false;
+                    if($this->getLife()->getConfig()->get("enable-smart-ai")){
+                        if($this->isDangerous($this->add($mx, $this->getJumpVelocity(), $mz))){
+                            return false;
+                        }
                     }
 
                     $this->motion->x = $mx;
